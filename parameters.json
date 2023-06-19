@@ -6,15 +6,15 @@
             "value": "centralindia"
         },
         "networkInterfaceName": {
-            "value": "linux-vm-01988"
+            "value": "training-vm-0177"
         },
         "networkSecurityGroupName": {
-            "value": "Linux-VM-01-nsg"
+            "value": "Training-VM-01-nsg"
         },
         "networkSecurityGroupRules": {
             "value": [
                 {
-                    "name": "SSH",
+                    "name": "RDP",
                     "properties": {
                         "priority": 300,
                         "protocol": "TCP",
@@ -23,7 +23,7 @@
                         "sourceAddressPrefix": "*",
                         "sourcePortRange": "*",
                         "destinationAddressPrefix": "*",
-                        "destinationPortRange": "22"
+                        "destinationPortRange": "3389"
                     }
                 }
             ]
@@ -32,11 +32,11 @@
             "value": "default"
         },
         "virtualNetworkName": {
-            "value": "Linux-VM-01-vnet"
+            "value": "Training-VM-01-vnet"
         },
         "addressPrefixes": {
             "value": [
-                "10.1.0.0/16"
+                "10.0.0.0/16"
             ]
         },
         "subnets": {
@@ -44,13 +44,13 @@
                 {
                     "name": "default",
                     "properties": {
-                        "addressPrefix": "10.1.0.0/24"
+                        "addressPrefix": "10.0.0.0/24"
                     }
                 }
             ]
         },
         "publicIpAddressName": {
-            "value": "Linux-VM-01-ip"
+            "value": "Training-VM-01-ip"
         },
         "publicIpAddressType": {
             "value": "Static"
@@ -62,16 +62,16 @@
             "value": "Detach"
         },
         "virtualMachineName": {
-            "value": "Linux-VM-01"
+            "value": "Training-VM-01"
         },
         "virtualMachineComputerName": {
-            "value": "Linux-VM-01"
+            "value": "Training-VM-01"
         },
         "virtualMachineRG": {
-            "value": "Linux-VM-01_group"
+            "value": "RG-Pipeline"
         },
         "osDiskType": {
-            "value": "Premium_LRS"
+            "value": "Standard_LRS"
         },
         "osDiskDeleteOption": {
             "value": "Detach"
@@ -83,10 +83,25 @@
             "value": "Detach"
         },
         "adminUsername": {
-            "value": "TestVM"
+            "value": "TrainingVM"
         },
         "adminPassword": {
             "value": "myAzureVM@2023"
+        },
+        "patchMode": {
+            "value": "AutomaticByOS"
+        },
+        "enableHotpatching": {
+            "value": false
+        },
+        "securityType": {
+            "value": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "value": true
+        },
+        "vTPM": {
+            "value": true
         }
     }
 }
