@@ -86,7 +86,7 @@
             "value": "TestVM"
         },
         "adminPassword": {
-            "value": null
+            "value": "myAzureVM@2023"
         }
     }
 }
